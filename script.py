@@ -30,9 +30,9 @@ for jsonobject in json.load(json_data):
     name = './vk/' + name
 
     if not os.path.isfile(name):
-    	try:
-        	testfile.retrieve(iriToUri(jsonobject['href']), name)
-    	except:
+        try:
+            testfile.retrieve(iriToUri(jsonobject['href']), name)
+        except:
             print 'Oops! Error!'
         print name
 
